@@ -23,7 +23,6 @@ public class Sort{
                 if (i+1 < doubles.size()){
                     firstDouble = doubles.get(i);
                     secondDouble = doubles.get(i+1);
-                    
                     if (firstDouble > secondDouble){
                         doubles.set(i, secondDouble);
                         doubles.set(i+1, firstDouble);
@@ -33,7 +32,7 @@ public class Sort{
             runs++;
         }
     }
-    
+
     public void sortNumsGTL(){
         int runs = 0;
         while (runs < doubles.size()){
@@ -43,7 +42,6 @@ public class Sort{
                 if (i+1 < doubles.size()){
                     firstDouble = doubles.get(i);
                     secondDouble = doubles.get(i+1);
-                    
                     if (firstDouble < secondDouble){
                         doubles.set(i, secondDouble);
                         doubles.set(i+1, firstDouble);
@@ -72,5 +70,23 @@ public class Sort{
             arrayRandom.add(Math.random()*100);
         }
         return arrayRandom;
+    }
+
+    public boolean testLTG(){
+        for (int i = 0; i < doubles.size()-1; i++){
+            if (doubles.get(i)>doubles.get(i+1)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean testGTL(){
+        for (int i = 0; i < doubles.size()-1; i++){
+            if (doubles.get(i)<doubles.get(i+1)){
+                return false;
+            }
+        }
+        return true;
     }
 }
